@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LibraryManagementSystem.Models
 {
-    public class User
+    public class UserModel
     {
             public int user_Id { get; set; }
             public string UserName { get; set; }
@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Models
             public string phone_number { get; set; }
             //public DateTime EnrollmentDate { get; set; }
 
-            public virtual ICollection<Book_on_Loan> Books_on_Loan { get; set; }
-        }
+            //public virtual ICollection<Book_out_on_loan> Books_out_on_loan { get; set; }
+            //public virtual ICollection<Categories> Category { get; set; }
     }
 }

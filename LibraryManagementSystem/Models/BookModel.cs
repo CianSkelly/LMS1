@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LibraryManagementSystem.Models
 {
-    public class Book
+    public class BookModel
     {
         public int ISBN { get; set; }
         public string Title { get; set; }
