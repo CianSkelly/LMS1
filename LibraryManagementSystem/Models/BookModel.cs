@@ -7,8 +7,9 @@ namespace LibraryManagementSystem.Models
 {
     public class BookModel
     {
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
+        
     }
 }
