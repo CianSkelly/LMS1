@@ -5,11 +5,12 @@ using System.Web;
 
 namespace LibraryManagementSystem.Models
 {
-    public class BookModel
+    public class Book
     {
         public string ISBN { get; set; }
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
-        
+
+        public virtual ICollection<BookOnLoan> BooksOnLoan { get; set; }
     }
 }
