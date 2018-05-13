@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using LibraryManagementSystem.Models;
+using System.Net;
 using System.Web.Mvc;
 
 namespace LibraryManagementSystem.Controllers
 {
     public class UserController : Controller
     {
+        //CS added the following code (for the Index View - get users in a list) but he compiler doesn't like it:
+        //private LibraryManagementSystem.LMS.dbo db = new LibraryManagementSystem.LMS.dbo();
+
+            //// GET: Users
+            //public ViewResult Index()
+            //{
+            //    return View(LibraryManagementSystem.LMS.dbo.User.ToList());
+            //}
+
         // GET: User
         public ActionResult Index()
         {
@@ -15,9 +22,18 @@ namespace LibraryManagementSystem.Controllers
         }
 
         // GET: User/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User user = LibraryManagementSystem.Users.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
         }
 
         // GET: User/Create
