@@ -7,7 +7,7 @@ namespace LibraryManagementSystem.Models
 {
     public class UserModel
     {
-            public int user_Id { get; set; }
+            public int User_Id { get; set; }
             public string UserName { get; set; }
             public string email_address { get; set; }
             public string phone_number { get; set; }
