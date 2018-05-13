@@ -255,7 +255,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BookOnLoan\" />
-    <Folder Include="Views\Book\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
